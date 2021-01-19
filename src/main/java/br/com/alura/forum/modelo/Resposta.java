@@ -11,10 +11,10 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Resposta {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String mensagem;
+	
 	@ManyToOne
 	private Topico topico;
 	private LocalDateTime dataCriacao = LocalDateTime.now();

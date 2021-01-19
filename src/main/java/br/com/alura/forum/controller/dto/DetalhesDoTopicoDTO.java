@@ -8,17 +8,17 @@ import java.util.stream.Collectors;
 import br.com.alura.forum.modelo.StatusTopico;
 import br.com.alura.forum.modelo.Topico;
 
-public class DetalhesDoTopicoDTO {
-	
+public class DetalhesDoTopicoDto {
+
 	private Long id;
 	private String titulo;
 	private String mensagem;
 	private LocalDateTime dataCriacao;
 	private String nomeAutor;
 	private StatusTopico status;
-	private List<RespostaDTO> respostas;
-
-	public DetalhesDoTopicoDTO(Topico topico) {
+	private List<RespostaDto> respostas;
+	
+	public DetalhesDoTopicoDto(Topico topico) {
 		this.id = topico.getId();
 		this.titulo = topico.getTitulo();
 		this.mensagem = topico.getMensagem();
@@ -26,7 +26,7 @@ public class DetalhesDoTopicoDTO {
 		this.nomeAutor = topico.getAutor().getNome();
 		this.status = topico.getStatus();
 		this.respostas = new ArrayList<>();
-		this.respostas.addAll(topico.getRespostas().stream().map(RespostaDTO::new).collect(Collectors.toList()));
+		this.respostas.addAll(topico.getRespostas().stream().map(RespostaDto::new).collect(Collectors.toList()));
 	}
 
 	public Long getId() {
@@ -53,10 +53,8 @@ public class DetalhesDoTopicoDTO {
 		return status;
 	}
 
-	public List<RespostaDTO> getRespostas() {
+	public List<RespostaDto> getRespostas() {
 		return respostas;
 	}
-	
-	
 	
 }

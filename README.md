@@ -8,6 +8,10 @@ Java 8
 JPA com Hibernate embutido
 Banco de dados H2
 Maven
+Autenticação com token JWT
+Monitoramento de API com Spring actuator
+Documentação com Swagger
+
 
 Com essa API é possível visualizar, alterar, buscar por id, listar e excluir dados.
 Foi adicionado um arquivo data.sql que realiza alguns inserts no  h2, sempre que é reiniciado.
